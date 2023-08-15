@@ -24,7 +24,7 @@ body{
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #000;
+  background: #262626;
   z-index: 1;
 }
   .container{
@@ -42,6 +42,7 @@ body{
     height: 90vh;
     width: 100%;
     background: #fff;
+    display:none;
   }
 
 
@@ -52,6 +53,7 @@ body{
     height: 100vh;
     width: 100%;
     background: #fff;
+    display:none;
   }
   .carousel-inner{
     position: absolute;
@@ -174,8 +176,8 @@ body{
 
 window.onload = function(){
 $('#contained').fadeOut();
-// $('#product').fadeIn();
-
+$('#myCarousel').fadeIn();
+$('#myCarousel1').fadeIn();
 
 
 const btnChanger = document.querySelector('.btn').offsetHeight;
