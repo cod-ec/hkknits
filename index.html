@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Init</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="media/animate.min.css">
+<link rel="stylesheet" href="media/bootstrap.min.css">
+<link rel="icon" href="media/logoo.png">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+  background: #fff;
+}
+
+#contained{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: 1;
+}
+  .container{
+    position:relative;
+    top: 0;
+    height:100vh;
+    width: 100%;
+  
+  }
+
+  #myCarousel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    background: #fff;
+  }
+
+
+  #myCarousel1{
+    position: absolute;
+    top: 90vh;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+  }
+  .carousel-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+  }
+
+  .item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+
+  }
+
+ 
+  </style>
+</head>
+<body>
+
+  <div id="contained"></div>
+
+<div class="container">
+
+
+
+  <div id="myCarousel" class="carousel slide wow bounceInLeft" data-wow-delay=".5s" data-ride="carousel">
+
+
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+ <!--      <li data-target="#myCarousel" data-slide-to="7"></li> -->
+    </ol>
+
+  
+
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="media/11.jpg" alt="Chania">
+
+      </div>
+
+      <div class="item">
+        <img src="media/12.jpg" alt="Chania">
+
+      </div>
+    
+      <div class="item">
+        <img src="media/3.jpg" alt="Flower">
+
+      </div>
+
+
+      <div class="item">
+        <img src="media/13.jpg" alt="Flower">
+
+      </div>
+      <div class="item">
+        <img src="media/5.jpg" alt="Flower">
+
+      </div>
+
+      <div class="item">
+        <img src="media/14.jpg" alt="Flower">
+
+      </div>
+
+
+      <div class="item">
+        <img src="media/15.jpg" alt="Flower">
+
+      </div>
+
+<!-- 
+
+      <div class="item">
+        <img src="media/media/8.jpg" alt="Flower">
+
+      </div> -->
+
+    </div>
+</div>
+
+<div id="myCarousel1">
+
+      <div class="ec-cart-widget"></div>
+<div>
+<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?90472368&data_platform=code&data_date=2023-08-05" charset="utf-8"></script>
+<script type="text/javascript">Ecwid.init();</script>
+</div>
+      
+<div id="my-store-90472368"></div>
+<div>
+<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?90472368&data_platform=code&data_date=2023-08-05" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-90472368");</script>
+</div>
+
+</div>
+</div>
+
+
+
+<script src="media/jquery.js"></script>
+<script src="media/wow.min.js"></script>
+<script src="media/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+
+window.onload = function(){
+$('#contained').fadeOut();
+// $('#product').fadeIn();
+
+
+
+const btnChanger = document.querySelector('.btn').offsetHeight;
+var innerWidth = window.innerWidth;
+var innerHeight = window.innerWidth;
+
+    
+const height = document.querySelector('#myCarousel').offsetHeight;
+$('#myCarousel1').css({height:height});
+
+
+const height1 = document.querySelector('.container').offsetHeight;
+$('#product').css({marginTop:height1});
+
+
+
+
+var height2 = document.querySelector('#myCarousel').offsetTop;
+
+if (innerHeight < height2) {
+$('.ec-cart-widget').css({position:"fixed"});
+}else{
+$('.ec-cart-widget').css({position:"relative"});
+}
+
+console.log(height2);
+
+
+
+// $('.btn').mouseover(function(){
+//     $('head').append('<style> .btn:before{animation:slide .3s linear forwards;animation-delay: .1s;animation-iteration-count: 1;}</style>');
+
+// });
+
+// $('.btn').mouseout(function(){
+//     $('head').append('<style> .btn:before{animation:slid .3s linear forwards;animation-delay: 0s;animation-iteration-count: 1;}</style>');
+
+// });
+
+
+$('.story').mouseover(function(){
+
+    $('.hr').animate({width:"0%"}, 500);
+
+});
+
+$('.story').mouseout(function(){
+  if (innerWidth < 750) {
+    $('.hr').animate({width:"120%"}, 500);
+  }else{
+    $('.hr').animate({width:"150%"}, 500);
+  }
+
+});
+
+}
+
+</script>
+</body>
+</html>
